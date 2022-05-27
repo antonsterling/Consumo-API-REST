@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #045e8b81;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    
+}
+
+header h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #012030;
+    padding-top: 5px;
+}
+
+main{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    
+}
+
+main h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #012030;
+}
+
+.container-randomDogs, .container-favoritesDogs{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: #DAFDBA;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 15px;
+}
+
+.container-randomDogs div, .container-favoritesDogs article{
+    width: 250px;
+    position: relative;
+}
+
+.container-randomDogs .main-img , .container-favoritesDogs .main-img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container-randomDogs .favorite-img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    left: calc(40%);
+    top: calc(40%);
+    opacity: 20%;
+}
+
+.favorite-img:hover{
+    animation: favorite 1.5s infinite;
+}
+
+@keyframes favorite{
+    0%{
+       transform: scale(1);
+       opacity: 40%;
+    }
+   
+    40%{
+       transform: scale(1.5);
+       opacity:70%;
+    }
+   
+    60%{
+       transform: scale(2);
+       opacity:90%;
+    }
+   
+   }
+
+.boton{
+    width: 140px;
+    height: 35px;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #13668a96;
+    border: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+
+}
+
+.boton:hover {
+    background: #13668a;
+ }
+
+
+.container-favoritesDogs{
+    margin-bottom: 20px;
+}
+
+.container-favoritesDogs article{
+    text-align: center;
+}
+
+.container-upload{
+    width: 90%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background-color: #DAFDBA;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 15px;
+}
+
+.subirFoto{
+    width: 200px;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.file{
+    padding: 10px;
+}

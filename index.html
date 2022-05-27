@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perros</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>App de Perritos</h1>
+        <span id="error"></span>
+    </header>
+    <main>
+        <h2>Lista de perritos aleatorios</h2>
+        <section class="container-randomDogs" id="randomDogs">
+            <div>
+                <img id="img1" alt="Foto de perrito aleatorio" class="main-img">
+                <img id="f1" onclick="saveFavoritesDogs" class="favorite-img" src="./estrella.png"> </img> 
+            </div>
+
+            <div>
+                <img id="img2" alt="Foto de perrito aleatorio" class="main-img">
+                <img id="f2" onclick="saveFavoritesDogs" class="favorite-img" src="./estrella.png"> </img>
+            </div>
+
+            <div>
+                <img id="img3" alt="Foto de perrito aleatorio" class="main-img">
+                <img id="f3" onclick="saveFavoritesDogs" class="favorite-img" src="./estrella.png"> </img>
+            </div>
+
+            <div>
+                <img id="img4" alt="Foto de perrito aleatorio" class="main-img">
+                <img id="f4" onclick="saveFavoritesDogs" class="favorite-img" src="./estrella.png"> </img>
+            </div>
+        </section>
+        <button id="changeButtton" class="change-boton boton"> 🔁 Mostar otros</button>
+        
+        <h2>Sube la foto de tu mascota</h2>
+        <section id="uploading" class="container-upload">
+            <form id="uploadingForm" class="subirFoto">
+                <input type="file" name="file" id="file" class="file">
+                <button type="button" onclick="uploadPhoto()" class="boton upload-button"> 🔼 Subir foto</button>
+            </form>
+        </section>
+
+
+        <h2>Perritos favoritos</h2>
+        <section class="container-favoritesDogs" id="favoritesDogs">
+            <!-- <article>
+                <img alt="Foto de perrito guardao" class="main-img">
+                <button id="deleteButton" class="delete-boton boton"> ⛔ Eliminar perrito</button>
+            </article> -->
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
